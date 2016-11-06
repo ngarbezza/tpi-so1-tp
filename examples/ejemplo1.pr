@@ -1,0 +1,25 @@
+Name : Ejemplo
+Priority : 6
+-- este es un comentario y se ignora completamente
+mov R0 "Hola "
+mov #4 " como andas..."
+request 1 "keyboard" 1 "display"
+input "Ingrese su nombre... " #7
+add R0 #7
+mov #3 R0
+add #3 #4
+show #3
+free
+request 1 "disk"
+cd "/"
+cd "ejemplos"
+-- asume que existe el directorio "ejemplos"
+newfile "prueba"
+open "prueba"
+write "prueba" #3
+save "prueba"
+close "prueba"
+delete "prueba"
+-- los archivos se borran para que el programa pueda correr
+-- varias veces sin problemas (de archivos duplicados)
+free

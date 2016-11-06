@@ -1,0 +1,35 @@
+Name : MakeFamily
+Priority : 4
+
+skip
+request 1 "keyboard"
+input "Cual es tu nombre ..." #1
+input "Como se llama tu madre ..." #2
+input "Como se llama tu padre ..." #3
+free
+mov #4 "Mi nombre es..."
+mov #5 "El nombre de mi madre es..."
+mov #6 "El nombre de mi padre es..."
+add #4 #1
+add #5 #2
+add #6 #3
+request 1 "disk"
+cd "/"
+mkdir "family"
+cd "family"
+newfile "family.tmp"
+open "family.tmp"
+writeline "family.tmp" #4
+writeline "family.tmp" #5
+writeline "family.tmp" #6
+save "family.tmp"
+readall "family.tmp" #7
+close "family.tmp"
+delete "family.tmp"
+cd ".."
+rmdir "family"
+free
+request 1 "display"
+show "Esta es mi familia"
+show #7
+free

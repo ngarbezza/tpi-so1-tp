@@ -1,0 +1,7 @@
+Copiar el archivo de esta carpeta "disk.os" en la carpeta "src/opsys".
+Deberia pedir para reemplazar.
+
+El backup contiene los programas basicos y los directorios necesarios
+
+El backup tiene como tamaño de bloque de indices 10 y como tamaño de bloque de datos 50.
+Si se especifican otros parametros, este backup no servira.

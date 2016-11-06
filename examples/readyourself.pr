@@ -1,0 +1,16 @@
+Name : ReadYourself
+Priority : 4
+
+-- un programa que se lee a si mismo e imprime su codigo
+
+skip
+request 1 "disk"
+cd "programs"
+open "readyourself.pr"
+readall "readyourself.pr" #1
+close "readyourself.pr"
+free
+request 1 "display"
+show "Puedo leerme a mi mismo..."
+show #1
+free
